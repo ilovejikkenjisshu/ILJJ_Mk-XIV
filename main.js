@@ -19,7 +19,7 @@ client.on('message', msg => {
     if(msg.content.startsWith('/xiv')){
 	commandCont(msg);
     }
-    //コマンド系の場合
+    //安否確認
     if(msg.content.startsWith('/xiv ping')){
         msg.channel.send('hello!!');
     }
@@ -28,7 +28,7 @@ client.on('message', msg => {
 
 //コマンドをさばくメソッド
 function commandCont(msg){
-    if (msg.content.startsWith('%tts')){
+    if (msg.content.startsWith('/xiv tts')){
 	//ttsコマンドをスマホからでもできるように代行する
 	tts(msg);
     }
